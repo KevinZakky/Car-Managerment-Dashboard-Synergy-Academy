@@ -7,6 +7,8 @@
 - [Dashboard](https://github.com/KevinZakky/Car-Managerment-Dashboard-Synergy-Academy/blob/main/backend/views/dashboard.ejs)
 - [Add Cars](https://github.com/KevinZakky/Car-Managerment-Dashboard-Synergy-Academy/blob/main/backend/views/add_cars.ejs)
 - [Login](https://github.com/KevinZakky/Car-Managerment-Dashboard-Synergy-Academy/blob/main/backend/views/login.ejs)
+- [List Cars](https://github.com/KevinZakky/Car-Managerment-Dashboard-Synergy-Academy/blob/main/backend/views/list_cars.ejs)
+- [Update Cars](https://github.com/KevinZakky/Car-Managerment-Dashboard-Synergy-Academy/blob/main/backend/views/update_cars.ejs)
 
 ## Endpoint REST API
 
@@ -19,10 +21,10 @@
     [
       {
         "id": 1,
-        "title": "Car Title",
-        "body": "Description of the car",
-        "user_id": 1,
-        "status": "available",
+        "name": "Car 1",
+        "rentPerDay": 100,
+        "image": "image1.png",
+        "url": "http://localhost:5000/uploads/image1.png",
         "created_at": "2024-01-01T00:00:00Z"
       },
       ...
@@ -35,10 +37,10 @@
     ```json
     {
       "id": 1,
-      "title": "Car Title",
-      "body": "Description of the car",
-      "user_id": 1,
-      "status": "available",
+      "name": "Car 1",
+      "rentPerDay": 100,
+      "image": "image1.png",
+      "url": "http://localhost:5000/uploads/image1.png",
       "created_at": "2024-01-01T00:00:00Z"
     }
     ```
@@ -48,10 +50,9 @@
   - Contoh Request Body:
     ```json
     {
-      "title": "New Car",
-      "body": "New car description",
-      "user_id": 1,
-      "status": "available"
+      "name": "New Car",
+      "rentPerDay": 150,
+      "image": "file"
     }
     ```
   - Contoh Response:
@@ -66,9 +67,9 @@
   - Contoh Request Body:
     ```json
     {
-      "title": "Updated Car",
-      "body": "Updated car description",
-      "status": "sold"
+      "name": "Updated Car",
+      "rentPerDay": 200,
+      "image": "file"
     }
     ```
   - Contoh Response:
@@ -87,7 +88,7 @@
     }
     ```
 
-### User Routes
+#### User Routes
 
 - **GET /users**
   - Deskripsi: Mengambil semua pengguna
@@ -97,9 +98,7 @@
       {
         "id": 1,
         "name": "John Doe",
-        "email": "john.doe@example.com",
-        "created_at": "2024-01-01T00:00:00Z",
-        "updated_at": "2024-01-01T00:00:00Z"
+        "email": "john.doe@example.com"
       },
       ...
     ]
@@ -112,13 +111,14 @@
     {
       "name": "John Doe",
       "email": "john.doe@example.com",
-      "password": "password123"
+      "password": "password123",
+      "confPassword": "password123"
     }
     ```
   - Contoh Response:
     ```json
     {
-      "message": "User registered successfully"
+      "message": "Register berhasil"
     }
     ```
 
@@ -155,5 +155,4 @@
     {
       "message": "Logout successful"
     }
-
 
