@@ -1,0 +1,26 @@
+<%- include('layout/header') %>
+    <div class="row">
+        <div class="col-md-8 login-background">
+            <img src="/image/login-background.jpg" alt="" style="background-size: cover;">
+        </div>
+        <div class="col-md-4 login-page my-auto ps-5 pe-5">
+            <a href="#" class="login-brand"></a>
+            <h3 style="font-weight: bold;">Welcome, Admin BCR</h3>
+            <form action="/login" method="post" id="add-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                        required>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary"
+                        style="background-color: #0D28A6; border-radius: 0;">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include('layout/footer') %>

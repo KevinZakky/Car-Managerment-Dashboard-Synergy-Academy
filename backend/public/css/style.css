@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.login-background img {
+  width: 1033px;
+  height: 100vh;
+}
+
+.login-brand,
+.dashboard-brand {
+  display: block;
+  width: 100px;
+  height: 34px;
+  background-color: #cfd4ed;
+  margin-bottom: 15px;
+}
